@@ -1,0 +1,52 @@
+#Rock paper scissors with predictive AI in python 3
+import random
+
+def CPUPlay(choices, pastMoves):
+    """CPUPlay() - generate computer's move based on previous player moves. returns CPU move: string"""
+    #strategy: if player has a favorite, pick its weakness, else pick a random one
+    v = list(pastMoves.values())
+    weakness = {'rock': 'paper', 'paper': 'scissors', 'scissors': 'rock'}
+    if sum(v)<3 or v.count(max(v))>1: #default to random is sample is too small, or if there is more than one maximum--> no weakness
+        return random.choice(choices)
+    else:
+        for key in pastMoves:
+            if pastMoves[key] == max(v): #find key corresponding to unique max value (favorite) and return its weakness
+                return weakness[key]
+ 
+def detResult(player, CPU, scores):
+    """detResult(player, CPU) - determine winner and update scores. return result: string."""
+    weakness = {'rock': 'paper', 'paper': 'scissors', 'scissors': 'rock'}
+    strength ={v:k for k, v in weakness.items()}
+    if player == CPU:
+        return 'Tie.'
+    elif strength[player] == CPU:
+        scores['player'] += 1
+        return 'You win!'
+    else:
+        scores['CPU'] += 1
+        return 'You Lose.'
+ 
+def mainGame():
+    """mainGame() - type rock, paper, or scissors to play the CPU. type quit to stop playing."""
+    playing = True
+    scores = {'player': 0, 'CPU': 0}
+    pastMoves = {'rock': 0, 'paper': 0, 'scissors': 0}
+    choices = 'rock', 'paper', 'scissors'
+   
+    while(playing):
+        #receive input from player
+        playerMove = ''
+        while(playerMove not in choices): #repeat until valid input
+            playerMove = input('rock, paper, scissors:\n').lower()
+            if playerMove == 'quit' or 'q':
+                playing = False
+                break
+           
+        if playing:
+          CPUMove = CPUPlay(choices, pastMoves)
+          print(type(CPUMove))         
+          print('CPU chooses ' + CPUMove[0] + '!', detResult(playerMove, CPUMove, scores), 'CPU: ' + str(scores['CPU']) + ' You: ' + str(scores['player']), sep='\n', end='\n\n')
+            #record player's move for future decisions
+          pastMoves[playerMove] += 1
+           
+mainGame()
