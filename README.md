@@ -1,7 +1,9 @@
 # arcade
 Projects for Data Analytics, and Predictive AI deployed in Games, ideally to scale to larger matrices and deep nets
 
-#**Project Title**: ##**PredictiveAI Rock Paper Scissors**
+#
+**Project Title**: 
+## **PredictiveAI Rock Paper Scissors**
 
 The project is intended to implement basic strategy of \"playing the player, not the game"\ as a machine uses past performance to inform decisions after being fed the rules of ROCHAMBO/Rock Paper Scissors
 
