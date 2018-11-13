@@ -3,7 +3,7 @@ Projects for Data Analytics, and Predictive AI deployed in Games, ideally to sca
 
 # **Project Title**: **Predictive AI Rock Paper Scissors**
 
-The project is intended to implement basic strategy of \"playing the player, not the game" as a machine uses past performance to inform decisions after being fed the rules of #### Rock Paper Scissors
+The project is intended to implement basic strategy of \"playing the player, not the game" as a machine uses past performance to inform decisions after being fed the rules of Rock Paper Scissors
 
 ## **How to use**
 
