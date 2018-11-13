@@ -9,9 +9,9 @@ The project is intended to implement basic strategy of \"playing the player, not
 
 Make sure you are running Python 3. I have found inconsistent and disappointing results from tries to compile online with temporary editors.
 
-The currentcodet is configurable if the user decides that a mercurial player will have made up their preference by just two consecutive choices.
+The current code is configurable. The history that decides preference is hard-coded to 3. If the user decides that a mercurial player will have made up their preference by just two consecutive choices, change the max. If more nuanced strategies of rock paper scissors are desired, the framework is also flexible to more information
 
-## **Pseudo code for exmaple implementation**
+## **Pseudo code for example implementation**
 Biological Learner | Machine Learner
 ------------ | -------------
 throw is a winner |  calculate strategic or random throw from preference
