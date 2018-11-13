@@ -1,18 +1,17 @@
-# arcade
+## arcade
 Projects for Data Analytics, and Predictive AI deployed in Games, ideally to scale to larger matrices and deep nets
 
-# **Project Title**: 
-## **PredictiveAI Rock Paper Scissors**
+# **Project Title**: **PredictiveAI Rock Paper Scissors**
 
 The project is intended to implement basic strategy of \"playing the player, not the game"\ as a machine uses past performance to inform decisions after being fed the rules of ROCHAMBO/Rock Paper Scissors
 
-##**How to use**
+## **How to use**
 
 Make sure you are running Python 3. I have found inconsistent and disappointing results from tries to compile online with temporary editors.
 
 The currentcodet is configurable if the user decides that a mercurial player will have made up their preference by just two consecutive choices.
 
-##**Pseudo code for exmaple implementation**
+## **Pseudo code for exmaple implementation**
 Biological Learner | Machine Learner
 ------------ | -------------
 throw is a winner |  calculate strategic or random throw from preference
